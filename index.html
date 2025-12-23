@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- 
+        ===========================================================
+        SECTION 1 : CONFIGURATION TECHNIQUE & SEO (RÉFÉRENCEMENT)
+        ===========================================================
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>KAK_SYSTEM | Excellence en Cybersécurité & Infrastructures IT - Togo</title>
+    
+    <!-- SEO : Optimisation pour les moteurs de recherche -->
+    <meta name="description" content="KAK_SYSTEM : Leader en cybersécurité, infrastructures critiques, vente de matériel informatique et maintenance 24/7 à Lomé, Togo.">
+    <meta name="keywords" content="Cybersécurité Togo, Maintenance informatique Lomé, Réseaux LAN WAN, Vente matériel informatique Togo, KAK SYSTEM, Audit informatique">
+    <meta name="author" content="KAK_SYSTEM">
+    <link rel="canonical" href="https://votre-domaine.com/">
+
+    <!-- SEO : Réseaux Sociaux (Open Graph) -->
+    <meta property="og:title" content="KAK_SYSTEM | Excellence au cœur du numérique">
+    <meta property="og:description" content="Expertise en infrastructures IT et protection de données stratégiques au Togo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-domaine.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600">
+
+    <!-- SÉCURITÉ : Politique de sécurité renforcée -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- 
+        ===========================================================
+        SECTION 2 : RESSOURCES EXTERNES (BIBLIOTHÈQUES)
+        ===========================================================
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 
+        ===========================================================
+        SECTION 3 : DESIGN ET STYLES (CSS)
+        ===========================================================
+    -->
+    <style>
+        :root {
+            --bg-dark: #010409;      /* Fond sombre profond */
+            --primary: #00f2ff;     /* Couleur Cyan Tech */
+            --accent: #00ff88;      /* Vert Statut Online */
+            --warning: #ff3e3e;     /* Rouge Alerte/Sensibilisation */
+            --border: rgba(0, 242, 255, 0.15);
+            --glass: rgba(1, 4, 9, 0.97);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-main: "Programatica Black Regular", "Helvetica", Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-main); 
+            background-color: var(--bg-dark); 
+            color: #f0f6fc; 
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 900; 
+        }
+        .font-tech { font-family: var(--font-main); font-weight: 900; }
+
+        .circuit-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(1, 4, 9, 0.9), rgba(1, 4, 9, 0.98)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; z-index: -1;
+        }
+
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: var(--glass); backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border); padding: 5px 5%;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1600px; margin: 0 auto; }
+        
+        /* --- ANIMATIONS LOGO --- */
+        @keyframes logoPulse {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 2px var(--primary)); }
+            50% { opacity: 0.6; filter: drop-shadow(0 0 15px var(--primary)); }
+        }
+        @keyframes rotateLogoContinual {
+            from { transform: perspective(1200px) rotateY(0deg); }
+            to { transform: perspective(1200px) rotateY(360deg); }
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            animation: rotateLogoContinual 10s linear infinite;
+            transform-style: preserve-3d;
+        }
+        .logo-svg {
+            height: 70px;
+            width: auto;
+            animation: logoPulse 2.5s infinite ease-in-out;
+        }
+
+        .activity-box {
+            background: rgba(0, 242, 255, 0.05); border-radius: 4px; padding: 6px 15px;
+            border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;
+        }
+        .live-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        #activity-text { font-size: 0.6rem; color: var(--primary); font-family: var(--font-main); text-transform: uppercase; font-weight: 900; }
+
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .whatsapp-icon { color: #25d366; font-size: 1.6rem; transition: var(--transition); }
+        .whatsapp-icon:hover { transform: scale(1.2) rotate(10deg); filter: drop-shadow(0 0 10px #25d366); }
+
+        .sidebar {
+            position: fixed; top: 0; right: -350px; width: 320px; height: 100%;
+            background: var(--glass); backdrop-filter: blur(25px);
+            border-left: 2px solid var(--primary); z-index: 2000;
+            transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1); padding: 80px 40px;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar a { display: block; color: #fff; text-decoration: none; font-family: var(--font-main); padding: 20px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; font-weight: 900; }
+        .sidebar a:hover { color: var(--primary); padding-left: 10px; }
+
+        .awareness-section {
+            background: linear-gradient(45deg, rgba(255, 62, 62, 0.05) 0%, rgba(0, 242, 255, 0.02) 100%);
+            border: 1px solid var(--border); border-left: 4px solid var(--warning);
+            padding: 45px; border-radius: 8px; margin: 40px auto; max-width: 1150px;
+        }
+        .awareness-title { color: var(--warning); display: flex; align-items: center; gap: 15px; margin-bottom: 25px; font-size: 1.3rem; letter-spacing: 1px; }
+
+        .expert-grid {
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; margin: 60px 0;
+        }
+        .expert-card {
+            background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+            padding: 25px 15px; border-radius: 4px; text-align: center; transition: var(--transition);
+        }
+        .expert-card:hover { border-color: var(--primary); transform: translateY(-5px); background: rgba(0, 242, 255, 0.05); }
+        .expert-card i { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+        .expert-card h3 { font-size: 0.7rem; font-family: var(--font-main); margin-bottom: 8px; color: #fff; text-transform: uppercase; font-weight: 900; }
+        .expert-card p { font-size: 0.65rem; color: #8b949e; line-height: 1.4; }
+
+        .footer-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            max-width: 1200px; margin: 40px auto;
+        }
+        .info-card {
+            background: rgba(0, 242, 255, 0.03); border: 1px solid var(--border);
+            padding: 25px; border-radius: 8px; transition: var(--transition);
+        }
+        .info-card:hover { border-color: var(--primary); background: rgba(0, 242, 255, 0.06); }
+        .info-card h4 { font-family: var(--font-main); font-size: 0.75rem; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 900; }
+        .info-card p { font-size: 0.8rem; color: #ccd6f6; margin-bottom: 5px; }
+
+        #legal-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); z-index: 3000; align-items: center; justify-content: center; backdrop-filter: blur(10px);
+        }
+        .modal-content { background: var(--bg-dark); border: 1px solid var(--primary); padding: 40px; width: 90%; max-width: 800px; max-height: 80vh; overflow-y: auto; border-radius: 8px; }
+
+        .final-signature {
+            text-align: center; padding: 25px; background: #000;
+            color: #555; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.05); letter-spacing: 1px;
+        }
+
+        @media (max-width: 1300px) { .expert-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px) { 
+            .expert-grid { grid-template-columns: repeat(2, 1fr); } 
+            .footer-grid { grid-template-columns: 1fr; } 
+            .activity-box { display: none; }
+        }
+        @media (max-width: 500px) { .expert-grid { grid-template-columns: 1fr; } .awareness-section { padding: 25px; } }
+    </style>
+</head>
+<body>
+
+    <div class="circuit-bg"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <!-- LOGO : ROTATION CONTINUELLE + CADENAS PETIT SUR LE 'A' -->
+            <a href="#" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(138, 8) scale(0.55)">
+                        <path d="M15,10 Q15,0 25,0 Q35,0 35,10 L35,25 L15,25 Z" fill="none" stroke="#ffffff" stroke-width="4"/>
+                        <path d="M5,25 L45,25 L50,35 L50,65 L25,80 L0,65 L0,35 Z" fill="#051937" stroke="#00f2ff" stroke-width="2.5"/>
+                        <circle cx="25" cy="48" r="3.5" fill="#00f2ff"/>
+                    </g>
+                    <text x="150" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="65" fill="#ffffff" style="letter-spacing: 5px;">KAK</text>
+                    <text x="150" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#00f2ff" style="letter-spacing: 3px;">
+                        <tspan fill="#ffffff">—</tspan> SYSTEM <tspan fill="#ffffff">—</tspan>
+                    </text>
+                </svg>
+            </a>
+            
+            <div class="activity-box">
+                <div class="live-dot"></div>
+                <div id="activity-text">Protocol_Init...</div>
+            </div>
+
+            <div class="header-right">
+                <a href="https://wa.me/22891750748" target="_blank" class="whatsapp-icon" title="Contact Direct">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <div id="openSidebar" style="cursor:pointer; color:var(--primary); font-size:1.4rem;">
+                    <i class="fas fa-bars-staggered"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+        <div id="closeSidebar" style="position:absolute; top:25px; right:25px; cursor:pointer;"><i class="fas fa-xmark fa-2x"></i></div>
+        <a href="#home">ACCUEIL</a>
+        <a href="#sensibilisation">VIGILANCE</a>
+        <a href="#expertises">DOMAINE D'EXPERTISES</a>
+        <a href="#contact">CONTACT & AUDIT</a>
+        <a href="javascript:void(0)" onclick="toggleLegal()">POLITIQUES & LÉGAL</a>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" style="height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 5%;">
+            <h1 data-aos="zoom-out" class="font-tech" style="font-size: clamp(2.2rem, 8vw, 4.5rem);">KAK_SYSTEM</h1>
+            <p class="font-tech" data-aos="fade-up" style="color:var(--primary); letter-spacing:5px; font-size:0.8rem;">ENGINEERING & CYBER-DEFENSE</p>
+        </section>
+
+        <!-- SENSIBILISATION (Contenu complet restauré) -->
+        <section class="container" id="sensibilisation" style="padding: 0 5%;">
+            <div class="awareness-section" data-aos="fade-up">
+                <div class="awareness-title font-tech">
+                    <i class="fas fa-triangle-exclamation"></i> APPEL À LA VIGILANCE STRATÉGIQUE
+                </div>
+                <div style="font-size: 1rem; color: #ccd6f6; line-height: 1.8; text-align: justify;">
+                    <p>À l’attention des <strong>Chefs d’entreprise</strong>, des <strong>Architectes</strong> et des <strong>Décideurs Stratégiques</strong> : 
+                    La transformation numérique mondiale n'est plus une option, mais une course impitoyable contre l'obsolescence. Nous assistons à une demande haussière sans précédent où vos infrastructures ne sont plus de simples outils, elles sont le <strong>pouls vital de votre organisation</strong>.</p>
+                    <br>
+                    <p>Ignorer la modernisation et la sécurisation de vos systèmes, c'est accepter une vulnérabilité fatale face aux cyber-menaces et à la perte d'agilité commerciale. Votre croissance future dépend mathématiquement de la robustesse de votre architecture technologique actuelle. <strong>L'heure n'est plus à la simple gestion, mais à l'anticipation proactive.</strong></p>
+                </div>
+                <div style="margin-top: 25px; font-size: 0.75rem; color: var(--primary); font-family: var(--font-main); font-weight: 900;">
+                    > STATUS: VIGILANCE_ACTIVE | PROTECTION: OPTIMALE | ANALYSE: 100%
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISES (Contenu complet restauré) -->
+        <section class="container" id="expertises" style="padding: 60px 5% 100px;">
+            <h2 class="font-tech" style="text-align:center; margin-bottom:50px; font-size:1.4rem;">PÔLES D'<span>INTERVENTION</span></h2>
+            <div class="expert-grid">
+                <div class="expert-card" data-aos="fade-up">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>CYBERSÉCURITÉ</h3>
+                    <p>Audit profond & défense des actifs numériques stratégiques.</p>
+                </div>
+                <div class="expert-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-microchip"></i>
+                    <h3>VENTE MATÉRIEL</h3>
+                    <p>Vente d'outils informatiques & accessoires de haute qualité certifiée.</p>
+                </div>
+                <div class="expert-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>RÉSEAUX</h3>
+                    <p>Architectures LAN/WAN & solutions de Haute disponibilité.</p>
+                </div>
+                <div class="expert-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-server"></i>
+                    <h3>INFRASTRUCTURE</h3>
+                    <p>Gestion parcs serveurs & Data centers critiques.</p>
+                </div>
+                <div class="expert-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                    <h3>MAINTENANCE</h3>
+                    <p>Support technique 24/7 préventif & curatif spécialisé.</p>
+                </div>
+                <div class="expert-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-magnifying-glass-chart"></i>
+                    <h3>AUDIT IT</h3>
+                    <p>Conseil stratégique & mise en conformité informatique complète.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="container" id="contact" style="padding: 0 5% 100px;">
+            <div style="max-width:800px; margin:0 auto; background:rgba(0, 242, 255, 0.02); border:1px solid var(--border); padding:40px; border-radius:8px;">
+                <h2 class="font-tech" style="text-align:center; margin-bottom:30px; color:var(--primary); font-size:1.1rem;">SÉCURISER VOTRE PROJET</h2>
+                <form action="https://formspree.io/f/xlgrjvyw" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+                    <input type="text" name="nom" placeholder="Organisation / Nom complet" style="padding:15px; background:#000; border:1px solid var(--border); color:#fff; font-family: var(--font-main);" required>
+                    <input type="email" name="_replyto" placeholder="Email professionnel" style="padding:15px; background:#000; border:1px solid var(--border); color:#fff; font-family: var(--font-main);" required>
+                    <textarea name="message" rows="4" placeholder="Description technique du besoin..." style="padding:15px; background:#000; border:1px solid var(--border); color:#fff; font-family: var(--font-main);" required></textarea>
+                    <button type="submit" class="font-tech" style="padding:20px; background:var(--primary); color:#000; border:none; font-weight:900; cursor:pointer;">TRANSMETTRE LA REQUÊTE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Contenu complet restauré) -->
+    <footer style="padding: 60px 5% 40px; border-top: 1px solid var(--border); background: #000;">
+        <div class="footer-grid">
+            <div class="info-card" data-aos="fade-right">
+                <h4><i class="fas fa-map-location-dot"></i> SIÈGE SOCIAL</h4>
+                <p>Lomé, Togo 🇹🇬</p>
+                <p>Zone Administrative & IT</p>
+                <p>Rayon d'action : Afrique de l'Ouest</p>
+            </div>
+            <div class="info-card" data-aos="fade-up">
+                <h4><i class="fas fa-headset"></i> ASSISTANCE DIRECTE</h4>
+                <p><strong>Email:</strong> kaKmondialCQService7507@gmail.com</p>
+                <p><strong>WhatsApp:</strong> +228 91 75 07 48</p>
+            </div>
+            <div class="info-card" data-aos="fade-left">
+                <h4><i class="fas fa-shield-halved"></i> STATUS DES SERVICES</h4>
+                <p><strong>Maintenance:</strong> 24h/7j Opérationnelle</p>
+                <p><strong>Audit:</strong> Sur RDV uniquement</p>
+                <p><strong>Matériel:</strong> Livraisons Lun - Sam</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:30px; font-size:0.8rem;">
+            <a href="javascript:void(0)" onclick="toggleLegal()" style="color:var(--primary); text-decoration:none; opacity:0.7;">
+                Politique de Confidentialité & Mentions Légales
+            </a>
+        </div>
+    </footer>
+
+    <div class="final-signature">© 2025 KAK_System. Tout droit réservés.</div>
+
+    <!-- MODALE LÉGALE (Contenu complet restauré) -->
+    <div id="legal-modal">
+        <div class="modal-content">
+            <h2 class="font-tech" style="color:var(--primary); margin-bottom:20px;">Mentions Légales & Confidentialité</h2>
+            <p><strong>1. Édition :</strong> Le présent site est édité par KAK_SYSTEM, Lomé, Togo.</p><br>
+            <p><strong>2. Services :</strong> Fourniture de solutions en cybersécurité, réseaux, infrastructures critiques et vente de matériel informatique haute performance.</p><br>
+            <p><strong>3. Données :</strong> Les informations recueillies via le formulaire (Formspree) sont traitées de manière sécurisée et ne sont jamais revendues à des tiers.</p><br>
+            <p><strong>4. Propriété :</strong> L'architecture du site, le contenu et le logo sont la propriété exclusive de KAK_SYSTEM.</p><br>
+            <button class="font-tech" onclick="toggleLegal()" style="margin-top:20px; padding:10px 25px; background:var(--primary); border:none; cursor:pointer; font-weight:bold; border-radius:4px;">FERMER</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openSidebar');
+        const closeBtn = document.getElementById('closeSidebar');
+
+        openBtn.onclick = (e) => { e.stopPropagation(); sidebar.classList.add('active'); };
+        closeBtn.onclick = () => { sidebar.classList.remove('active'); };
+
+        function toggleLegal() {
+            const modal = document.getElementById('legal-modal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        const logs = ["OPS: ONLINE", "SEC: AES-256", "LOCATION: LOMÉ", "THREAT_LEVEL: LOW", "SCANNING_FLUX..."];
+        let logIndex = 0;
+        setInterval(() => {
+            const el = document.getElementById('activity-text');
+            if(el) {
+                el.style.opacity = 0;
+                setTimeout(() => { 
+                    el.innerText = logs[logIndex]; 
+                    el.style.opacity = 1; 
+                    logIndex = (logIndex + 1) % logs.length; 
+                }, 500); 
+            }
+        }, 3500);
+    </script>
+</body>
+</html>
